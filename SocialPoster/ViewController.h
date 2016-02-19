@@ -8,8 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
+    
+    UIImagePickerController *picker;
+    UIImage *image;
+    
+}
 
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+- (IBAction)takePhoto:(id)sender;
+- (IBAction)loadLibrary:(id)sender;
+- (IBAction)facebook:(id)sender;
+- (IBAction)twitter:(id)sender;
+- (IBAction)dismissKeyboard:(id)sender;
 
 @end
 
