@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Social/Social.h>
+#import <Accounts/Accounts.h>
 
 @interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
     
     UIImagePickerController *picker;
     UIImage *image;
     
+    SLComposeViewController *composer;
 }
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
